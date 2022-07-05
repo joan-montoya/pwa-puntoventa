@@ -3,12 +3,11 @@ import FavoriteContext from "../contexts/favoritesContext";
 
 const Navbar = () => {
   const { favoritePokemons } = useContext(FavoriteContext);
-  const logoImg =
-    "../images/pokedex.png";
+  const Img ="../images/pokedex.png";
   return (
     <nav>
       <div>
-        <img alt="pokedex" src={logoImg} className="navbar-img" />
+        <img alt="pokedex" src={Img} className="navbar-img" />
       </div>
       <div>{favoritePokemons.length} ❤️</div>
     </nav>

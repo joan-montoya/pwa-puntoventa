@@ -87,7 +87,7 @@ function App() {
     >
       <div>
       <h2 className="pokemon-card">
-<Link to= "/id"> Id</Link>
+<Link to= "/matricula"> Matricula</Link>
 </h2>
 <Outlet/>
         <Navbar />

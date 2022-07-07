@@ -1,12 +1,12 @@
-let id = [
+let matricula = [
     {
     number: 190967,
     name: "Carlos Isaac Macias Herrera",  
 }
 ];
-export function getid(){
-    return id;
+export function getMatricula(){
+    return matricula;
 }
-export function getIds(number){
-    return id.find((ids)=> ids.number===number);
+export function getMatricu(number){
+    return matricula.find((matricu)=> matricu.number===number);
 }

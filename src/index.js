@@ -4,16 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
-import Ids from './routes/ids';
-import Id from './routes/ids';
+import Matricu from './routes/matricu';
+import Matricula from './routes/matricula';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
 <Routes>
   <Route path= "/" element= {<App />}>
-    <Route path= "/id" element={<Id />} >
-      <Route path= ":idsId" element= {<Ids/>}/>
+    <Route path= "/matricula" element={<Matricula />} >
+    <Route path= ":matricuId" element= {<Matricu/>}/>
       </Route>
   </Route>
 </Routes>

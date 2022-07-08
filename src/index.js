@@ -6,14 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Matricu from './routes/matricu';
 import Matricula from './routes/matricula';
+import Pokemons from './routes/pokemons';
+import Pokemon from './routes/pokemon';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
 <Routes>
   <Route path= "/" element= {<App />}>
-    <Route path= "/matricula" element={<Matricula />} >
-    <Route path= ":matricuId" element= {<Matricu/>}/>
+  <Route path= "/pokemons" element={<Pokemons />} >
+  <Route path=":pokemonId" element={<Pokemon />} />
+    </Route>
+    <Route path= "/190967" element={<Matricula />} >
       </Route>
   </Route>
 </Routes>

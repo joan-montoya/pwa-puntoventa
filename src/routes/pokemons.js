@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { getPokemonData, getPokemons, searchPokemon } from "./api";
-import "./App.css";
-import Navbar from "./components/Navbar";
-import Pokedex from "./components/Pokedex";
-import Searchbar from "./components/Searchbar";
-import { FavoriteProvider } from "./contexts/favoritesContext";
+import { getPokemonData, getPokemons, searchPokemon } from "../api";
+import "../App.css";
+import Navbar from "../components/Navbar";
+import Pokedex from "../components/Pokedex";
+import Searchbar from "../components/Searchbar";
+import { FavoriteProvider } from "../contexts/favoritesContext";
 import {Link, Outlet} from 'react-router-dom';
 
 const favoritesKey = "f"
-function App() {
+function Pokemons() {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -87,14 +87,29 @@ function App() {
     >
       <div>
       <h2 className="pokemon-card">
-<Link to= "/190967"> Matricula</Link>
-<Link to= "/pokemons"> Ver pokemons</Link>
 </h2>
-<Outlet/>
-        <Navbar />
+
+        <Searchbar onSearch={onSearchHandler}/>
+        <Outlet/> 
+        
+        {notFound ? (
+          <div class-name="not-found-text"> ¡¿Cuál Pokémon es ese pai?! </div>
+          
+        ) : 
+        (
+            
+        <Pokedex
+          pokemons={pokemons}
+          loading={loading}
+          page={page}
+          setPage={setPage}
+          totalPages={totalPages}
+        />)}
+        
       </div>
+      
     </FavoriteProvider>
   );
 }
 
-export default App;
+export default Pokemons;

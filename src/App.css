@@ -56,6 +56,26 @@ nav {
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
 }
+.card{
+  height: 40%;
+  width: 100%;
+  background-color: blanchedalmond;
+}
+.pokemonselect{
+  position: absolute;
+  top: 0px;
+  right: 20%;
+}
+.miinfo{
+  position: absolute;
+  top: 200px;
+  background-color: white;
+}
+.nombre{
+  position: absolute;
+  top: 40px;
+  left: 100px;
+}
 
 .pokemon-card {
   display: flex;

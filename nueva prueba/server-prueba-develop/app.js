@@ -8,6 +8,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const http = require("http");
 const servidor = http.createServer(app);
+require('dotenv').config()
+
 
 const JWT_SECRET =
   "hvdvay6ert72839289()aiyg8t87qt72393293883uhefiuh78ttq3ifi78272jbkj?[]]pou89ywe";
@@ -86,7 +88,7 @@ app.post("/userData", async (req, res) => {
 });
 const socketio = require("socket.io");
 
-const server = app.listen(3000 || PORT, () =>
+const server = app.listen(3000 || process.env.PORT, () =>
   console.log(`Server started on ${3000}`)
 );
 const io = socketio(server, {
